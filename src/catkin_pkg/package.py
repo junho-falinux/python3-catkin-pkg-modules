@@ -237,16 +237,16 @@ class Package(object):
         new_warnings = []
 
         if self.package_format:
-            if not re.match('^[1-9][0-9]*$', str(self.package_format)):
+            if not re.match(r'^[1-9][0-9]*$', str(self.package_format)):
                 errors.append('The "format" attribute of the package must contain a positive integer if present')
 
         if not self.name:
             errors.append('Package name must not be empty')
         # accepting upper case letters and hyphens only for backward compatibility
-        if not re.match('^[a-zA-Z0-9][a-zA-Z0-9_-]*$', self.name):
+        if not re.match(r'^[a-zA-Z0-9][a-zA-Z0-9_-]*$', self.name):
             errors.append('Package name "%s" does not follow naming conventions' % self.name)
         else:
-            if not re.match('^[a-z][a-z0-9_-]*$', self.name):
+            if not re.match(r'^[a-z][a-z0-9_-]*$', self.name):
                 new_warnings.append(
                     'Package name "%s" does not follow the naming conventions. It should start with '
                     'a lower case letter and only contain lower case letters, digits, underscores, and dashes.' % self.name)
