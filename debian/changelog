@@ -1,0 +1,5 @@
+python3-catkin-pkg-modules (1.1.0-2) focal jammy noble buster bullseye bookworm trixie; urgency=low
+
+  * source package automatically created by stdeb 0.10.0
+
+ -- Dirk Thomas <dthomas@osrfoundation.org>  Wed, 10 Sep 2025 22:42:47 -0500
